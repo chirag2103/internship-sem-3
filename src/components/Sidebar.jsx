@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../css/Sidebar.css';
 import Playlist from './Playlist.jsx';
 
@@ -7,25 +8,19 @@ function Sidebar() {
     <div className="sidebar">
       <ul>
         <li className="active">
-          <a href="/">Discover</a>
+          <Link to="/">Discover</Link>
+        </li>
+        <li className="active">
+          <Link to="/new-release">New Releases</Link>
         </li>
         <li>
-          <a href="/albums">Albums</a>
+          <Link to="/top-artists">Top Artists</Link>
         </li>
         <li>
-          <a href="/top-artists">Top Artists</a>
+          <Link to="/topcharts">Top Charts</Link>
         </li>
         <li>
-          <a href="/genres">Genres</a>
-        </li>
-        <li>
-          <a href="/topcharts">Top Charts</a>
-        </li>
-        <li>
-          <a href="/new-release">New Releases</a>
-        </li>
-        <li>
-          <a href="/playlists">Playlist</a>
+          <Link to="/playlists">Playlist</Link>
           <Playlist />
         </li>
       </ul>
