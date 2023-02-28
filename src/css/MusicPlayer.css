@@ -1,0 +1,148 @@
+.Music-Bar-Container {
+  position: relative;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Track-Container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 1 1 0%;
+}
+.Track-Image-Box {
+  display: hidden;
+  height: 4rem;
+  width: 4rem;
+  margin-right: 1rem;
+}
+.Track-Image {
+  border-radius: 9999px;
+}
+.Track-Animation {
+  animation: spin 3s infinite linear;
+}
+
+.Track-Title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: white;
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+.Track-Subtitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: grey;
+}
+
+.Controls-Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 0%;
+}
+.Controls-Box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.SeekBar-Container {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+}
+.SeekBar-Button {
+  color: white;
+}
+.SeekBar-Skip {
+  width: 6rem;
+  height: 0.25rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-radius: 0.5rem;
+}
+
+.VolumeBar-Container {
+  display: hidden;
+  flex: 1 1 0%;
+  align-items: center;
+  justify-content: flex-end;
+}
+.VolumeBar-Change {
+  height: 0.25rem;
+  margin-left: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  .Controls-Box {
+    width: 13rem;
+  }
+  .Minus {
+    margin-right: 1rem;
+    display: block;
+  }
+  .Plus {
+    margin-left: 1rem;
+    display: block;
+  }
+  .VolumeBar-Container {
+    display: flex;
+  }
+  .VolumeBar-Change {
+    width: 8rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .Music-Bar-Container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .Track-Image {
+    display: block;
+  }
+  .SeekBar-Container {
+    display: flex;
+  }
+}
+@media (min-width: 768px) {
+  .SeekBar-Skip {
+    display: block;
+    width: 14rem;
+  }
+  .Controls-Box {
+    width: 9rem;
+  }
+  .VolumeBar-Change {
+    width: 8rem;
+  }
+}
+@media (min-width: 1536px) {
+  .SeekBar-Skip {
+    width: 24rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+  .Controls-Box {
+    width: 20rem;
+  }
+  .VolumeBar-Change {
+    width: 10rem;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

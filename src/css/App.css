@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  box-sizing: border-box;
+  background-color: #dc9191;
+}
+
+main {
+  display: flex;
+}
+
+.SongBarHome {
+  position: absolute;
+  height: 7rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  animation: slideup 1s ease-in-out;
+  z-index: 100;
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+}
+@keyframes slideup {
+  from {
+    opacity: 0;
+    transform: translateY(25%);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -1,0 +1,7 @@
+footer {
+  /* display: flex; */
+  /* width: 100vw; */
+  background-color: rgba(0, 0, 0, 0.3);
+  align-items: center;
+  text-align: center;
+}
