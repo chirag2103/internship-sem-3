@@ -17,7 +17,7 @@ function Sidebar() {
           <Link to="/top-artists">Top Artists</Link>
         </li>
         <li>
-          <Link to="/topcharts">Top Charts</Link>
+          <Link to="/top-charts">Top Charts</Link>
         </li>
         <li>
           <Link to="/playlists">Playlist</Link>

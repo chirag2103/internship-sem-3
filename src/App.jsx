@@ -9,6 +9,9 @@ import { useSelector } from 'react-redux';
 import Searchbar from './components/Searchbar';
 import SearchPage from './components/SearchPage';
 import TopArtists from './components/TopArtists';
+import NewReleases from './components/NewReleases';
+import TopCharts from './components/TopCharts';
+import Playlist from './components/Playlist';
 
 function App() {
   const { activeSong } = useSelector((state) => state.player);
@@ -20,8 +23,11 @@ function App() {
         <Sidebar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/new-release" element={<NewReleases />} />
           <Route path="/search/:term" element={<SearchPage />} />
           <Route path="/top-artists" element={<TopArtists />} />
+          <Route path="/top-charts" element={<TopCharts />} />
+          <Route path="/playlists" element={<Playlist />} />
         </Routes>
       </main>
       {activeSong?.title && (
