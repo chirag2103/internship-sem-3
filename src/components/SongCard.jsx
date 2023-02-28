@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import '../css/SongCard.css';
 import PlayPause from './PlayPause.jsx';
 import { playPause, setActiveSong } from '../redux/features/playerSlice.js';
+import { addSong } from '../redux/features/playlistSlice.js';
 export default function SongCard({ song, data, i, activeSong, isPlaying }) {
   const dispatch = useDispatch();
   const handlePauseClick = () => {
@@ -13,16 +14,22 @@ export default function SongCard({ song, data, i, activeSong, isPlaying }) {
     dispatch(setActiveSong({ song, data, i }));
     dispatch(playPause(true));
   };
+
+  const handlePlaylist = () => {
+    dispatch(addSong(song));
+  };
   return (
     <>
       <div className="SingleSongContainer">
-        <PlayPause
-          song={song}
-          handlePause={handlePauseClick}
-          handlePlay={handlePlayClick}
-          isPlaying={isPlaying}
-          activeSong={activeSong}
-        />
+        <div className="SongPlayPause">
+          <PlayPause
+            song={song}
+            handlePause={handlePauseClick}
+            handlePlay={handlePlayClick}
+            isPlaying={isPlaying}
+            activeSong={activeSong}
+          />
+        </div>
         <img src={song.images?.coverart} alt="song_img" />
         <p>
           <Link to={`/songs/${song?.key}`}>{song.title}</Link>
@@ -37,6 +44,9 @@ export default function SongCard({ song, data, i, activeSong, isPlaying }) {
           >
             {song.subtitle}
           </Link>
+        </p>
+        <p>
+          <button onClick={handlePlaylist}>Add to PlayList</button>
         </p>
       </div>
     </>

@@ -1,0 +1,12 @@
+.TopArtists {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .TopArtists {
+    justify-content: flex-start;
+  }
+}

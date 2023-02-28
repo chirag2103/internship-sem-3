@@ -7,14 +7,13 @@ function Sidebar() {
     <div className="sidebar">
       <ul>
         <li className="active">
-          <a href="/playlists">Playlists</a>
-          <Playlist />
+          <a href="/">Discover</a>
         </li>
         <li>
           <a href="/albums">Albums</a>
         </li>
         <li>
-          <a href="/artists">Artists</a>
+          <a href="/top-artists">Top Artists</a>
         </li>
         <li>
           <a href="/genres">Genres</a>
@@ -26,7 +25,8 @@ function Sidebar() {
           <a href="/new-release">New Releases</a>
         </li>
         <li>
-          <a href="/discover">Discover</a>
+          <a href="/playlists">Playlist</a>
+          <Playlist />
         </li>
       </ul>
       <div className="sidebar-footer">

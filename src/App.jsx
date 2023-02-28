@@ -6,14 +6,23 @@ import MusicPlayer from './components/MusicPlayer';
 import './css/App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import Searchbar from './components/Searchbar';
+import SearchPage from './components/SearchPage';
+import TopArtists from './components/TopArtists';
+
 function App() {
   const { activeSong } = useSelector((state) => state.player);
   return (
     <Router>
-      <Navbar />
+      {/* <Navbar /> */}
+      <Searchbar />
       <main>
         <Sidebar />
-        <Home />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/search/:term" element={<SearchPage />} />
+          <Route path="/top-artists" element={<TopArtists />} />
+        </Routes>
       </main>
       {activeSong?.title && (
         <div className="SongBarHome">
@@ -21,9 +30,6 @@ function App() {
         </div>
       )}
       <Footer />
-      <Routes>
-        <Route path="/home" element={<Home />} />
-      </Routes>
     </Router>
   );
 }

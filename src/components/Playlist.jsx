@@ -27,7 +27,9 @@ export default function Playlist() {
   return (
     <div>
       {playlist.map((song) => (
-        <li key={song.id}>{song.name}</li>
+        <li key={song.id} style={{ color: 'white' }}>
+          {song.title}
+        </li>
       ))}
     </div>
   );
