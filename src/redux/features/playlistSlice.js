@@ -5,7 +5,7 @@ const playlistSlice = createSlice({
   initialState: [],
   reducers: {
     addSong: (state, action) => {
-      state.push(action.payload.data);
+      state.push(action.payload);
     },
     removeSong: (state, action) => {
       return state.filter((song) => song.id !== action.payload);

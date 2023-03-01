@@ -1,8 +1,64 @@
 .SingleSongContainer {
   display: flex;
   flex-direction: column;
-  width: 5rem;
-  border: 2px solid black;
-  padding: 2rem;
-  margin: 1rem;
+  width: 250px;
+  padding: 1rem;
+  background-color: white;
+  opacity: 0.8;
+  animation: slideup 1s ease-in-out;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.SingleSongContainer-box {
+  position: absolute;
+  top: 6rem;
+  right: 0;
+  bottom: 0;
+  left: 6rem;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.Song-Title {
+  font-weight: 600;
+  color: white;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.button {
+  color: #fff;
+  background-color: #5e94ff;
+  border-radius: 4px;
+  padding: 8px 20px;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  transition: 0.3s linear;
+}
+.button:hover {
+  outline: 1px solid #fff;
+  background-color: #0b1320;
+}
+
+.Box1 {
+  display: flex;
+  background-color: black;
+}
+.Box2 {
+  display: none;
+}
+
+@keyframes slideup {
+  from {
+    opacity: 0;
+    transform: translateY(25%);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }

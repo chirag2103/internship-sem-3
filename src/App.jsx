@@ -12,6 +12,8 @@ import TopArtists from './components/TopArtists';
 import NewReleases from './components/NewReleases';
 import TopCharts from './components/TopCharts';
 import Playlist from './components/Playlist';
+import Singin from './components/Signin';
+import Singup from './components/Signup';
 
 function App() {
   const { activeSong } = useSelector((state) => state.player);
@@ -19,6 +21,7 @@ function App() {
     <Router>
       {/* <Navbar /> */}
       <Searchbar />
+
       <main>
         <Sidebar />
         <Routes>
@@ -28,6 +31,8 @@ function App() {
           <Route path="/top-artists" element={<TopArtists />} />
           <Route path="/top-charts" element={<TopCharts />} />
           <Route path="/playlists" element={<Playlist />} />
+          <Route path="/signin" element={<Singin />} />
+          <Route path="/signup" element={<Singup />} />
         </Routes>
       </main>
       {activeSong?.title && (

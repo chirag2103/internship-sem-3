@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../css/Sidebar.css';
-import Playlist from './Playlist.jsx';
 
 function Sidebar() {
   return (
@@ -21,7 +20,6 @@ function Sidebar() {
         </li>
         <li>
           <Link to="/playlists">Playlist</Link>
-          <Playlist />
         </li>
       </ul>
       <div className="sidebar-footer">

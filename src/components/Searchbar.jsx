@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import { FiSearch } from 'react-icons/fi';
 import '../css/SearchBar.css';
@@ -24,6 +24,7 @@ const Searchbar = () => {
           flexDirection: 'row',
           justifyContent: 'center',
           alignItems: 'center',
+          paddingLeft: '14rem',
         }}
       >
         <FiSearch aria-hidden="true" className="search-icon" />
@@ -37,6 +38,9 @@ const Searchbar = () => {
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
+        <Link className="button" style={{ marginRight: '6rem' }} to="/signin">
+          Sign In
+        </Link>
       </div>
     </form>
   );

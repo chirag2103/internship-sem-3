@@ -23,9 +23,6 @@
 .sidebar li:last-child {
   border-bottom: none;
 }
-/* .sidebar li:first-child {
-  margin-top: 10vh;
-} */
 
 .sidebar a {
   color: #fff;
@@ -41,7 +38,6 @@
 }
 
 .sidebar-footer {
-  /* position: absolute; */
   bottom: 0;
   width: 15vw;
   padding: 15px 0px;

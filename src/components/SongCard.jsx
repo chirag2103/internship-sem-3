@@ -16,12 +16,13 @@ export default function SongCard({ song, data, i, activeSong, isPlaying }) {
   };
 
   const handlePlaylist = () => {
-    dispatch(addSong(song));
+    dispatch(addSong(song, data, i));
+    console.log(song);
   };
   return (
-    <>
-      <div className="SingleSongContainer">
-        <div className="SongPlayPause">
+    <div className="SingleSongContainer">
+      <div style={{ position: 'relative', width: '100%', height: '14rem' }}>
+        <div className={`SingleSongContainer-box`}>
           <PlayPause
             song={song}
             handlePause={handlePauseClick}
@@ -30,25 +31,37 @@ export default function SongCard({ song, data, i, activeSong, isPlaying }) {
             activeSong={activeSong}
           />
         </div>
-        <img src={song.images?.coverart} alt="song_img" />
-        <p>
+        <img
+          src={song.images?.coverart}
+          alt="song_img"
+          style={{ width: '100%', height: '100%', borderRadius: '0.5rem' }}
+        />
+      </div>
+
+      <div
+        className="mt-4 flex flex-col"
+        style={{ marginTop: '1rem', display: 'flex', flexDirection: 'column' }}
+      >
+        <p className="Song-Title">
           <Link to={`/songs/${song?.key}`}>{song.title}</Link>
         </p>
-        <p>
+        <p className="text-sm truncate text-gray-300 mt-1">
           <Link
             to={
               song.artists
                 ? `/artists/${song?.artists[0]?.adamid}`
-                : `/top-artists`
+                : '/top-artists'
             }
           >
             {song.subtitle}
           </Link>
         </p>
         <p>
-          <button onClick={handlePlaylist}>Add to PlayList</button>
+          <button className="button" onClick={handlePlaylist}>
+            Add to PlayList
+          </button>
         </p>
       </div>
-    </>
+    </div>
   );
 }

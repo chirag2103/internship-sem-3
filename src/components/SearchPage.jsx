@@ -35,19 +35,22 @@ export default function SearchPage() {
   console.log(data);
   return (
     <>
-      <div className="SongsContainer">
-        {data.map((song, i) => {
-          return (
-            <SongCard
-              key={song.key}
-              song={song}
-              i={i}
-              data={data}
-              isPlaying={isPlaying}
-              activeSong={activeSong}
-            />
-          );
-        })}
+      <div style={{ display: 'flex', flexDirection: 'column' }}>
+        <h2 style={{ paddingBottom: '1rem' }}>Searched Result for {term}</h2>
+        <div className="SongsContainer">
+          {data.map((song, i) => {
+            return (
+              <SongCard
+                key={song.key}
+                song={song}
+                i={i}
+                data={data}
+                isPlaying={isPlaying}
+                activeSong={activeSong}
+              />
+            );
+          })}
+        </div>
       </div>
     </>
   );

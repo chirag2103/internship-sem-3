@@ -1297,61 +1297,6 @@ export const chartstrack = {
     {
       layout: '5',
       type: 'MUSIC',
-      key: '652520920',
-      title: 'Kusazo Shuba',
-      subtitle: 'Justin99 & Uncle Waffles & PCee & Eeque',
-      share: {
-        subject: 'Kusazo Shuba - Justin99 & Uncle Waffles & PCee & Eeque',
-        text: 'I used Shazam to discover Kusazo Shuba by Justin99 & Uncle Waffles & PCee & Eeque.',
-        href: 'https://www.shazam.com/track/652520920/kusazo-shuba',
-        twitter:
-          'I used @Shazam to discover Kusazo Shuba by Justin99 & Uncle Waffles & PCee & Eeque.',
-        html: 'https://www.shazam.com/snippets/email-share/652520920?lang=hi-IN&country=IN',
-        snapchat: 'https://www.shazam.com/partner/sc/track/652520920',
-      },
-      hub: {
-        type: 'APPLEMUSIC',
-        image:
-          'https://images.shazam.com/static/icons/hub/web/v5/applemusic.png',
-        options: [
-          {
-            caption: 'OPEN',
-            actions: [
-              {
-                name: 'hub:applemusic:subscribe',
-                type: 'applemusicopen',
-                uri: 'https://music.apple.com/subscribe?mttnagencyid=s2n&mttnsiteid=125115&mttn3pid=Apple-Shazam&mttnsub1=Shazam_web&mttnsub2=5348615A-616D-3235-3830-44754D6D5973&itscg=30201&app=music&itsct=Shazam_web',
-              },
-              {
-                name: 'hub:applemusic:subscribe',
-                type: 'uri',
-                uri: 'https://music.apple.com/subscribe?mttnagencyid=s2n&mttnsiteid=125115&mttn3pid=Apple-Shazam&mttnsub1=Shazam_web&mttnsub2=5348615A-616D-3235-3830-44754D6D5973&itscg=30201&app=music&itsct=Shazam_web',
-              },
-            ],
-            beacondata: {
-              type: 'open',
-              providername: 'applemusic',
-            },
-            image:
-              'https://images.shazam.com/static/icons/hub/web/v5/overflow-open-option.png',
-            type: 'open',
-            listcaption: 'Open in Apple Music',
-            overflowimage:
-              'https://images.shazam.com/static/icons/hub/web/v5/applemusic-overflow.png',
-            colouroverflowimage: false,
-            providername: 'applemusic',
-          },
-        ],
-        explicit: false,
-        displayname: 'APPLE MUSIC',
-      },
-      url: 'https://www.shazam.com/track/652520920/kusazo-shuba',
-      highlightsurls: {},
-      properties: {},
-    },
-    {
-      layout: '5',
-      type: 'MUSIC',
       key: '632531170',
       title: 'Unholy',
       subtitle: 'Sam Smith & Kim Petras',

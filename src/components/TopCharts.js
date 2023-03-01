@@ -1,45 +1,26 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import TopChartsCard from './TopChartsCard';
+import SongCard from './SongCard.jsx';
+import { chartstrack as data } from '../data/chartstrack.js';
 
 export default function TopCharts() {
-  const [data, setData] = useState([]);
   const { activeSong, isPlaying } = useSelector((state) => state.player);
-
-  const fetchData = async () => {
-    const options = {
-      method: 'GET',
-      url: 'https://itunes.apple.com/in/rss/topsongs/limit=20/json',
-    };
-    await axios
-      .request(options)
-      .then((res) => {
-        console.log(res.data);
-        setData(res.data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  };
-  useEffect(() => {
-    fetchData();
-  }, []);
-  console.log(data);
   return (
     <>
-      {data?.feed?.entry.map((song, i) => {
-        return (
-          <TopChartsCard
-            song={song}
-            key={i}
-            i={i}
-            activeSong={activeSong}
-            isPlaying={isPlaying}
-            data={data.results}
-          />
-        );
-      })}
+      <h2>Top Charts</h2>
+      <div className="SongsContainer">
+        {data.tracks?.map((song, i) => {
+          return (
+            <SongCard
+              key={song.key}
+              song={song}
+              i={i}
+              data={data}
+              isPlaying={isPlaying}
+              activeSong={activeSong}
+            />
+          );
+        })}
+      </div>
     </>
   );
 }

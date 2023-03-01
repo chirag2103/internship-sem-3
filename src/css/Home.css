@@ -1,5 +1,12 @@
 .SongsContainer {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .SongsContainer {
+    justify-content: flex-start;
+  }
 }
